@@ -37,6 +37,8 @@ app.get('/keg', async (req, res) => {
   }
 })
 
+
+
 app.post('/keg', async (req, res) => {
   try {
     let name = req.body.name;
@@ -44,13 +46,15 @@ app.post('/keg', async (req, res) => {
     let price = req.body.price;
     let alcoholContent = req.body.alcoholContent;
     let type = req.body.type;
+    let fill = req.body.type;
 
     let id = await knex('keg').insert({
       "name": name,
       "brand": brand,
       "price": price,
       "alcoholContent": alcoholContent,
-      "type": type
+      "type": type,
+      "fill": fill,
     })
     res.json({
       id: id[0],
@@ -58,11 +62,47 @@ app.post('/keg', async (req, res) => {
       brand,
       price,
       alcoholContent,
-      type
+      type,
+      fill
     })
   } catch (e) {
     console.log(e);
     next (e)
+  }
+})
+
+app.put('/keg/:id', async (req, res) => {
+  console.log("hi");
+  console.log(req);
+  try {
+    let name = req.body.name;
+    let brand = req.body.brand;
+    let price = req.body.price;
+    let alcoholContent = req.body.alcoholContent;
+    let type = req.body.type;
+    let fill = req.body.fill;
+    let id = req.params.id;
+    console.log(id);
+
+    await knex('keg').where('id', id).update({
+      "name": name,
+      "brand": brand,
+      "price": price,
+      "alcoholContent": alcoholContent,
+      "type": type,
+      "fill": fill
+    })
+    res.json ({
+      name,
+      brand,
+      price,
+      alcoholContent,
+      type,
+      fill,
+      id
+    })
+  } catch (e) {
+    console.log(e);
   }
 })
 
