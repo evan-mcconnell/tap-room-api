@@ -7,7 +7,7 @@ module.exports = {
       connection: {
         host: 'localhost',
         user: 'root',
-        password: 'password',
+        password: '',
         database: 'kegs',
         charset: 'utf8'
       }
@@ -18,7 +18,7 @@ module.exports = {
     connection: {
       database: 'kegs',
       user:     'root',
-      password: 'password'
+      password: ''
     },
     pool: {
       min: 2,
@@ -34,7 +34,7 @@ module.exports = {
     connection: {
       database: 'kegs',
       user:     'root',
-      password: 'password'
+      password: ''
     },
     pool: {
       min: 2,

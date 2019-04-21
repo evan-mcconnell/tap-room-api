@@ -67,7 +67,7 @@ $ mysql -u root
 
 
 ### **Install Knex**
-Knex is a SQL query builder for Node.js that allows for model schema creation, migrations, connection pooling, and seeding. <br>
+Knex is a SQL query builder for Node.js that allows for model schema creation, migrations, connection pooling, and seeding. In this case, it's serving a similar purpose as an ORM library, without being a full-fledged ORM.<br>
 We want to install this globally as well as in our dependencies.
 ```bash
 $ npm install knex -g
