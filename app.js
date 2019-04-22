@@ -6,7 +6,10 @@ const port = 3000
 
 app.use(cors())
 
+
 app.listen(port, () => console.log(`Example app is listening at ${port}!`))
+
+
 
 const knex = require (`knex`) ({
   client: 'mysql',
