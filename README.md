@@ -59,11 +59,37 @@ Because brew is installing MySQL in `usr/local/Cellar`. If you want to check tha
 $ ls usr/local/Cellar
 ```
 
-Great! Now that we have MySQL, we can start running it with 
+Great! Now that we have MySQL, we need to start up the server. Run 
+```bash
+$ brew services start mysql
+```
+
+Now we can log into MySQL with: 
+
 ```bash
 $ mysql -u root
 ```
-`-u` refers to the user, and `root` is the default user.
+`-u` refers to the user, and `root` is the default user. There is no initial password, but if we wanted to enter a password as well, we'd add a `-p` to the command. We'll get to that in a bit.
+
+Now we're going to need a database for our data to go in. MySQL's configurations are in their own databases already, and we can cehck out the list with 
+```bash
+$ show databases;
+```
+MySQL should show us a list that looks like
+| Databases |
+|--- |
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys |
+
+We'll add another database to this list, then we'll let Knex take over from there. To add another database, run: 
+```bash
+$ create database new_database_name;
+```
+If you want to try this with my tap-room front end, name the databse `kegs`. Otherwise, pick a name that descibes the data you want to store. 
+
+Run `show databases;` again and you should see your new database in the list! 
 
 
 ### **Install Knex**
