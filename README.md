@@ -4,6 +4,9 @@ _Published_ **April 21 2019**<br>
 _Author_  **Kimberly McConnell**
 <hr/>
 
+1. [Set Up Guide](#set-up-guide)
+1. [Tutorial to Do it Yourself](#do-it-yourself-tutorial)
+
 ## **Set Up Guide**
 _This guide will tell you how to clone down the repo and get it running with a database. It assumes you have brew installed._
 ***
@@ -67,23 +70,28 @@ To populate the table with seed data, run:
 $ knex seed:run
 ```
 
-### **To use**
+## **To use**
 To use without a front end, you can play with the data postman.
  <br>
- <br>
-**Make a GET request**
+ 
+**Make a GET request** <br>
 Make a get request to http://localhost:3000/keg in postman to see all the data in the table by selecting "GET".
  <br>
 
-**Make a POST request**
+**Make a POST request** <br>
 Make a post request to http://localhost:3000/keg in postman. After selecting "PUT", go to the Body tab and click the option for x-www-form-urlencoded to enter values in as key value pairs, or select raw to enter the data as objects. 
  <br>
 
-**Make a PUT request to edit a row**
+**Make a PUT request to edit a row** <br>
 Do the same thing as a post request expect select "PUT". Use http://localhost:3000/keg/**id** where id is the id of the keg you row you want to alter. For instance, if you use http://localhost:3000/keg/3, you'll be altering the third keg. 
 
-
-
+To use with a pre-made front-end:
+Clone the api branch of my tap-room-react [here](https://github.com/kimmcconnell/tap-room-react/tree/api). <br>
+_Make sure you have the api branch_
+```bash
+$ npm install
+$ npm run start
+```
 <br>
 <br>
 
