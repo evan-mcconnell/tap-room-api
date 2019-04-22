@@ -14,7 +14,7 @@ const knex = require (`knex`) ({
     host: 'localhost',
     user: 'root',
     password: 'password',
-    database: 'kegs'
+    database: 'taproom_local'
   }
 })
 

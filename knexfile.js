@@ -7,8 +7,8 @@ module.exports = {
       connection: {
         host: 'localhost',
         user: 'root',
-        password: '',
-        database: 'kegs',
+        password: 'password',
+        database: 'taproom_local',
         charset: 'utf8'
       }
     },
@@ -16,9 +16,9 @@ module.exports = {
   staging: {
     client: 'mysql',
     connection: {
-      database: 'kegs',
+      database: 'taproom_local',
       user:     'root',
-      password: ''
+      password: 'password'
     },
     pool: {
       min: 2,
@@ -32,9 +32,9 @@ module.exports = {
   production: {
     client: 'mysql',
     connection: {
-      database: 'kegs',
+      database: 'taproom_local',
       user:     'root',
-      password: ''
+      password: 'password'
     },
     pool: {
       min: 2,
