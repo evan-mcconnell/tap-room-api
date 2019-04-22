@@ -76,12 +76,12 @@ Now we're going to need a database for our data to go in. MySQL's configurations
 $ show databases;
 ```
 MySQL should show us a list that looks like
-| Databases |
-|--- |
-| information_schema |
-| mysql              |
-| performance_schema |
-| sys |
+ Databases |
+---|
+ information_schema |
+ mysql              |
+ performance_schema |
+ sys |
 
 We'll add another database to this list, then we'll let Knex take over from there. To add another database, run: 
 ```bash
